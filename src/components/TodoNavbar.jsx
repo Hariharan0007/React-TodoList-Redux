@@ -1,18 +1,18 @@
 import React from 'react'
 import logo from './images/todo.jpg';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const TodoNavbar = () => {
 
-    // const nav = useNavigate();
+    const nav = useNavigate();
 
-    // const getAllTodo = () => {
-    //     nav("/all/");
-    // }
+    const getAllTodo = () => {
+        nav("/todo/");
+    }
     
-    // const addNew = () => {
-    //     nav("/add/");
-    // }
+    const addNew = () => {
+        nav("/");
+    }
 
   return (
     <div>
@@ -24,11 +24,11 @@ const TodoNavbar = () => {
             <p className="font-semibold text-sm lg:text-lg flex justify-end"> - - Mark your work</p>
         </header>
         <nav className="mt-4 border border-black py-2 bg-slate-500">
-            {/* <ul className="flex justify-evenly">
+            <ul className="flex justify-evenly">
                 <li className=" px-3 py-3 rounded-full bg-gray-600 hover:bg-gray-700 hover:cursor-pointer text-white font-semibold">Todays Todo</li>
                 <li onClick={addNew} className=" px-3 py-3 rounded-full bg-gray-600 hover:bg-gray-700 hover:cursor-pointer text-white font-semibold">Add Todo</li>
                 <li onClick={getAllTodo} className=" px-3 py-3 rounded-full bg-gray-600 hover:bg-gray-700 hover:cursor-pointer text-white font-semibold">View All</li>
-            </ul> */}
+            </ul>
         </nav>
     </div>
   )
